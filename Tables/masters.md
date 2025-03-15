@@ -7,7 +7,7 @@
 |name|varchar(100)|Имя| |
 |middle_name|varchar(100)|Отчество| |
 |level|uuid|Идентификатор уровня мастера|FK|\
- ## Создание индексов для таблицы Мастера ##
+ ## Создание индексов для таблицы Мастера 
  ```
  create index idx_fullame
 on masters (surname, name)
