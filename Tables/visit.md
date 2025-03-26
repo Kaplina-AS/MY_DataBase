@@ -3,14 +3,14 @@
 Таблица Посещения содержит основную информацию о посещениях клиентов салона.
 |Название атрибута|Тип данных|Описание атрибута|Ограничения|Обязательность|
 |-|-------|---|-|-|
-|id|uuid|Уникальный идентификатор записи|PRIMARY KEY, UNIQUE KEY|NOT NULL|
+|visit_id|uuid|Уникальный идентификатор записи|PRIMARY KEY|NOT NULL|
+|client_id|uuid|Идентификатор клиента|FOREIGN KEY|NOT NULL|
+|employee_id|uuid|Идентификатор cотрудника|FOREIGN KEY|NOT NULL|
 |visit_date|date|Дата посещения| |NOT NULL|
-|service_id|uuid|Идентификатор услуги|FK|NOT NULL|
-|amount|number|Общая сумма посещения| | |
-|is_visit_done|boolean|Признак того что посещение состоялось| |NOT NULL|
-|is_cancel_visit|boolean|Признак того  посещение было отменено| |NOT NULL|
-|master|uuid|Идентификатор мастера, оказавшего услугу| | |
-|client|uuid|Идентификатор клиента|FOREIGN KEY|not null|
+|service_id|uuid|Идентификатор услуги|FOREIGN KEY|NOT NULL|
+|status_id|uuid|Идентификатор статуса услуги|FOREIGN KEY|NOT NULL|
+|created_at|timestamp|Дата создания записи| |NOT NULL|
+|updated_at|timestamp|Дата обновления записи| |NOT NULL|\
 ## Создание индексов для таблицы Посещения 
  #### Простой индекс
  ```
@@ -20,7 +20,7 @@ on visit (visit_date)
  В базе данных поиск посещений по дате ускорит поиск записей.
 #### Составной индекс
  ```
- create index idx_visit_date_amount
-on visit (visit_date, amount)
+ create index idx_visit_date_status
+on visit (visit_date, status_id)
  ```
- Составной индекс может ускорить поиск записей, например, по условию выбора даты и суммы оплаты услуг в эту дату.
+ Составной индекс может ускорить поиск записей, например, по условию выбора даты и статуса услуги в эту дату.

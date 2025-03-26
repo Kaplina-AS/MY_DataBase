@@ -3,17 +3,19 @@
 Таблица Клиенты содержит основную информацию по клиентам салона (включая ограничения).
 |Название атрибута|Тип данных|Описание атрибута|Ограничения|Обязательность|
 |-----------------|----------|-----------------|-----------|-|
-|id|uuid|Уникальный идентификатор записи|PRIMARY KEY, UNIQUE KEY|NOT NULL|
-|surname|varchar(100)|Фамилия| |NOT NULL|
-|name|varchar(100)|Имя| |NOT NULL|
-|middle_name|varchar(100)|Отчество| |
-|birth|date|Дата рождения| |
-|is_letter|boolean|Признак рассылки| |
-|created|timestamp|Дата создания записи| |NOT NULL|\
+|client_id|uuid|Уникальный идентификатор записи|PRIMARY KEY|NOT NULL|
+|last_name|varchar(255)|Фамилия| |NOT NULL|
+|first_name|varchar(255)|Имя| |NOT NULL|
+|middle_name|varchar(255)|Отчество| | |
+|birth_date|date|Дата рождения| | |
+|phone|varchar(20)|Номер телефона| | |
+|email|varchar(50)|Адрес электронной почты| | |
+|created_at|timestamp|Дата создания записи| |NOT NULL|
+|updated_at|timestamp|Дата обновления записи| |NOT NULL|\
  ## Создание индексов для таблицы Клиенты 
  #### Составной индекс
  ```
  create index idx_surname_name
-on clients (surname, name)
+on clients (last_name, first_name)
  ```
  В базе данных поиск по имени и фамилии может получить преимущество от составного индекса по  двум столбцам - surname и name - позволит найти все необходимые строки за один проход, избегая повторного обращения к таблице.
