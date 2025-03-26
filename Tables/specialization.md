@@ -4,9 +4,9 @@
 |Название атрибута|Тип данных|Описание атрибута|Ограничения|Обязательность|
 |-|-------|---|-|-|
 |specialization_id|uuid|Уникальный идентификатор записи|PRIMARY KEY|NOT NULL|
-|specialization_name|varchar(255)|Название специализации |NOT NULL|
-|description|varchar(255)|Описание специализации | |
-|notes|text|Дополнительная информация | |
+|specialization_name|varchar(255)|Название специализации| |NOT NULL|
+|description|varchar(255)|Описание специализации| | |
+|notes|text|Дополнительная информация| | |
 |created_at|timestamp|Дата создания записи| |NOT NULL|
 |updated_at|timestamp|Дата обновления записи| |NOT NULL|\
 ## Создание индексов для таблицы Услуги 

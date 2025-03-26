@@ -10,7 +10,7 @@
 |Название атрибута|Тип данных|Описание атрибута|Ограничения|Обязательность|
 |-|-------|---|-|-|
 |status_id|uuid|Уникальный идентификатор записи|PRIMARY KEY|NOT NULL|
-|status_name|varchar(50)|Название статуса |NOT NULL|
+|status_name|varchar(50)|Название статуса| |NOT NULL|
 |notes|text|Описание статуса | |
 |created_at|timestamp|Дата создания записи| |NOT NULL|
 |updated_at|timestamp|Дата обновления записи| |NOT NULL|\
