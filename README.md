@@ -12,7 +12,7 @@
    - [Таблица Клиенты](Tables/clients.md)
    - [Таблица Сотрудники](Tables/employee.md)
    - [Таблица Категории предоставляемых услуг](Tables/service_category.md)
-   - [Таблица Услуги](Tables/service.md)
+   - [Таблица Услуги](Tables/services.md)
    - [Таблица Специализации сотрудников](Tables/specialization.md)
    - [Таблица Посещения](Tables/visit.md)
    - [Таблица Статусы посещений](Tables/visit_status.md)

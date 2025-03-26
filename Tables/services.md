@@ -4,11 +4,11 @@
 |Название атрибута|Тип данных|Описание атрибута|Ограничения|Обязательность|
 |-|-------|---|-|-|
 |service_id|uuid|Уникальный идентификатор записи|PRIMARY KEY|NOT NULL|
-|service_name|varchar(100)|Название услуги |NOT NULL|
-|description|text|Описание услуги | |
-|category_id|uuid|Идентификатор категории услуги |NOT NULL|
-|duration|int4|Длительность услуги (в минутах) услуги |NOT NULL|
-|price|numeric|Стоимость услуги |NOT NULL|
+|service_name|varchar(100)|Название услуги| |NOT NULL|
+|description|text|Описание услуги| | |
+|category_id|uuid|Идентификатор категории услуги| |NOT NULL|
+|duration|int4|Длительность услуги (в минутах) услуги| |NOT NULL|
+|price|numeric|Стоимость услуги| |NOT NULL|
 |created_at|timestamp|Дата создания записи| |NOT NULL|
 |updated_at|timestamp|Дата обновления записи| |NOT NULL|\
 ## Создание индексов для таблицы Услуги 

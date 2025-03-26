@@ -4,7 +4,7 @@
 |Название атрибута|Тип данных|Описание атрибута|Ограничения|Обязательность|
 |-|-------|---|-|-|
 |category_id|uuid|Уникальный идентификатор записи|PRIMARY KEY|NOT NULL|
-|category_name|varchar(255)|Название категории |NOT NULL|
+|category_name|varchar(255)|Название категории| |NOT NULL|
 |description|text|Описание категории | |
 |created_at|timestamp|Дата создания записи| |NOT NULL|
 |updated_at|timestamp|Дата обновления записи| |NOT NULL|\
