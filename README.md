@@ -16,3 +16,4 @@
    - [Таблица Специализации сотрудников](Tables/specialization.md)
    - [Таблица Посещения](Tables/visit.md)
    - [Таблица Статусы посещений](Tables/visit_status.md)
+3. [Установка СУБД PostgreSQL] (Установка СУБД PostgreSQL.md)
