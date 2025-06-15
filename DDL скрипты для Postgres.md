@@ -17,7 +17,7 @@
 
 ## Создание таблиц БД
 **Таблица клиенты**
-```
+``` 
  CREATE TABLE beaty_salon.clients
 (
     client_id SERIAL PRIMARY KEY NOT NULL,
